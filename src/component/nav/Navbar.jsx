@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar() {
     return (
-        <div className=' mx-auto shadow-sm'>
+        <div className=' mx-auto bg-white shadow-sm'>
             <div className="navbar flex justify-between  w-10/12 mx-auto">
                 <div className="">
                     <a className="btn  text-xl">CS-Ticketing System</a>

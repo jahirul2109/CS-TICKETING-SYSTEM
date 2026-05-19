@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 :root {
-  background-color: white;
+  background-color: gainsboro;
   color: black;
 }
