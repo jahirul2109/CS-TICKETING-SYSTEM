@@ -47,9 +47,18 @@ export default function Card() {
             </div>
 
             <div className=''>
-                <h1 className='text-xl font-bold'>Task Status</h1>
                 <div>
-
+                    <h1 className='text-xl font-bold'>Task Status</h1>
+                    {/* Task Status Card */}
+                    <div>
+                        <div className='bg-white rounded-md shadow-md p-4'>
+                            <h1 className='font-semibold'>Payment Faild - Card Declined</h1>
+                            <button className='btn bg-green-600 border-none w-full'>Complete</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1 className='text-xl font-bold'>Resovled Task</h1>
                 </div>
             </div>
         </div>
