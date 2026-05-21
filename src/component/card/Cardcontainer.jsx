@@ -1,27 +1,30 @@
-import React, { use } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import Card from './Card'
+import InProgress from '../task/Progress';
+export default function Cardcointainer({ promiseData, selected, setSelected, addProgress, removeSelected, addResolve }) {
+    const coustomerData = use(promiseData);
+    const [cards, setCards] = useState([]);
 
-export default function Cardcointainer({promiseData}) {
-    const coustomerData = use (promiseData);
+    useEffect(() => {
+        setCards(coustomerData)
+    }, [coustomerData])
+
     console.log(coustomerData)
     return (
-        <div className='grid grid-cols-5 w-11/12 mx-auto mt-20'>
-            <Card coustomerData = {coustomerData}></Card>
-            <div className=''>
-                <div>
-                    <h1 className='text-xl font-bold'>Task Status</h1>
-                    {/* Task Status Card */}
-                    <div>
-                        <div className='bg-white rounded-md shadow-md p-4'>
-                            <h1 className='font-semibold'>Payment Faild - Card Declined</h1>
-                            <button className='btn bg-green-600 border-none w-full'>Complete</button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h1 className='text-xl font-bold'>Resovled Task</h1>
-                </div>
-            </div>
+        <div className='grid grid-cols-5 gap-2 w-11/12 mx-auto mt-20'>
+            <Card
+                cards={cards}
+                setCards={setCards}
+                addProgress={addProgress}
+                selected={selected}
+                setSelected={setSelected}
+                coustomerData={coustomerData}></Card>
+            <InProgress
+                removeSelected={removeSelected}
+                addResolve={addResolve}
+                selected={selected}
+                setSelected={setSelected}
+            ></InProgress>
         </div>
     )
 }
