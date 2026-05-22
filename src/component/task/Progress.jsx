@@ -10,10 +10,10 @@ export default function InProgress({ selected, setSelected, addResolve, removeSe
     }
     return (
         <div className=''>
-            <div>
+            <div className='mb-4'>
                 <h1 className='text-xl font-bold'>Task Status</h1>
                 {/* Task Status Card */}
-                {selected.map(task => <div>
+                {selected.length === 0 ? (<h1>Selecet a ticket to add to task</h1>) : (selected.map(task => <div>
                     <div className='bg-white rounded-md mb-2 shadow-md p-4'>
                         <h1 className='font-semibold'>{task.title}</h1>
                         <button
@@ -23,18 +23,18 @@ export default function InProgress({ selected, setSelected, addResolve, removeSe
                             }}
                             className='btn bg-green-600 border-none w-full'>Complete</button>
                     </div>
-                </div>)}
+                </div>)) }
             </div>
             <div>
                 <h1 className='text-xl font-bold'>Resovled Task</h1>
-                {removeSelected.map(resolve => <div>
+                {removeSelected.length === 0 ? (<h1>No Resolved Tasks yet</h1>) : (removeSelected.map(resolve => <div>
                     <div className='bg-white rounded-md mb-2 shadow-md p-4'>
                         <h1 className='font-semibold'>{resolve.title}</h1>
                         <button
                             disabled={true}
                             className='btn bg-green-600 border-none w-full'>Resolve</button>
                     </div>
-                </div>)}
+                </div>))}
             </div>
         </div>
     )
