@@ -17,7 +17,6 @@ function App() {
     const resolveData = [...removeSelected, resolve];
     setRemoveSelected(resolveData);
   }
-  console.log(selected)
   return (
     <>
       <nav>
