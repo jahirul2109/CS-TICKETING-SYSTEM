@@ -10,9 +10,9 @@ export default function Card({ addProgress, cards, setCards }) {
         addProgress(data)
     }
     return (
-        <div className='col-span-4'>
+        <div className='md:col-span-4'>
             <h1 className='text-xl mx-3 font-bold'>Coustomers Ticket</h1>
-            <div className='grid grid-cols-2 gap-3 w-full'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-3 w-full'>
                 {cards.map(data => <div onClick={() => {
                     removehandel(data)
                     handelSelect(data)

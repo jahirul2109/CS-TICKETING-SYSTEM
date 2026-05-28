@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from './component/nav/Navbar'
 import Count from './component/hero_section/Count'
 import Cardcointainer from './component/card/Cardcontainer'
+import Footer from './component/footer/footer';
 
 const promiseData = fetch('/data/api_data.js').then(res => res.json());
 
@@ -34,6 +35,9 @@ function App() {
         setSelected={setSelected}
         promiseData={promiseData}
       ></Cardcointainer>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </>
   )
 }

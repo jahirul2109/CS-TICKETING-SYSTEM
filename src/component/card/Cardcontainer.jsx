@@ -11,7 +11,7 @@ export default function Cardcointainer({ promiseData, selected, setSelected, add
 
     console.log(coustomerData)
     return (
-        <div className='grid grid-cols-5 gap-2 w-11/12 mx-auto mt-20'>
+        <div className='grid grid-cols-1 md:grid-cols-5 gap-2 w-11/12 mx-auto mt-20'>
             <Card
                 cards={cards}
                 setCards={setCards}

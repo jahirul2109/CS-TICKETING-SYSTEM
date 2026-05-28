@@ -3,7 +3,7 @@ import vectorImg from "../../assets/vector1.png"
 
 export default function Count({ selected, removeSelected }) {
   return (
-    <div className='w-11/12  mx-auto grid grid-cols-2 gap-3 text-white mt-20'>
+    <div className='w-11/12  mx-auto grid md:grid-cols-2 grid-cols-1 gap-3 text-white mt-20'>
       <div className=' text-center py-22  relative overflow-hidden rounded-2xl '>
         {/* right img */}
         <img src= {vectorImg} className='right-0  rotate-y-180  top-0 h-full opacity-100 absolute' alt="" />
